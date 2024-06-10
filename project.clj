@@ -17,7 +17,8 @@
   :license {:name "MIT License"
             :url  "https://opensource.org/licenses/MIT"}
 
-  :dependencies [[org.clojure/clojure "1.10.1"]
+  :dependencies [[clojure.java-time "1.4.2"]
+                 [org.clojure/clojure "1.10.1"]
                  [org.jmonkeyengine/jme3-core ~jme-version]
                  [org.jmonkeyengine/jme3-plugins ~jme-version]
                  [org.jmonkeyengine/jme3-terrain ~jme-version]
