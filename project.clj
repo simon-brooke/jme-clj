@@ -1,6 +1,6 @@
 (def jme-version "3.7.0-beta1")
 
-(defproject jme-clj "0.1.14"
+(defproject jme-clj "0.1.15-simon-brooke"
 
   :codox {:metadata    {:doc        "**TODO**: write docs"
                         :doc/format :markdown}
@@ -17,7 +17,8 @@
   :license {:name "MIT License"
             :url  "https://opensource.org/licenses/MIT"}
 
-  :dependencies [[org.clojure/clojure "1.10.1"]
+  :dependencies [[clojure.java-time "1.4.2"]
+                 [org.clojure/clojure "1.10.1"]
                  [org.jmonkeyengine/jme3-core ~jme-version]
                  [org.jmonkeyengine/jme3-plugins ~jme-version]
                  [org.jmonkeyengine/jme3-terrain ~jme-version]
