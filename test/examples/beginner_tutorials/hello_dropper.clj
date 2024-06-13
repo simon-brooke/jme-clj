@@ -5,10 +5,11 @@
             [jme-clj.core :refer [add-control add-to-root attach attach-child
                                   bitmap-text box bullet-app-state call* cam
                                   defsimpleapp detach-all-child geo get*
-                                  get-state gui-node load-font look-at
+                                  get-state gui-node letj load-font load-texture look-at
                                   material rigid-body-control set* set-state
                                   setc sphere vec3]])
-  (:import (com.jme3.math ColorRGBA Vector3f)))
+  (:import (com.jme3.math ColorRGBA Vector3f)
+           (com.jme3.texture Texture$WrapMode)))
 
 (def brick-length 0.5)
 (def brick-width 0.5)
@@ -22,6 +23,14 @@
   {:wall-mat (set* (material "Common/MatDefs/Misc/Unshaded.j3md") :color "Color" ColorRGBA/Red)
    :stone-mat (set* (material "Common/MatDefs/Misc/Unshaded.j3md") :color "Color" ColorRGBA/Gray)
    :floor-mat (set* (material "Common/MatDefs/Misc/Unshaded.j3md") :color "Color" ColorRGBA/Blue)})
+
+;; (defn- init-materials []
+;;   (letj [wall-mat (material "Common/MatDefs/Misc/Unshaded.j3md")
+;;          stone-mat (material "Common/MatDefs/Misc/Unshaded.j3md")
+;;          floor-mat (material "Common/MatDefs/Misc/Unshaded.j3md")]
+;;         (set* wall-mat :texture "ColorMap" (load-texture "Textures/Terrain/BrickWall/BrickWall.jpg"))
+;;         (set* floor-mat :texture "ColorMap" (-> (load-texture "Textures/Terrain/Pond/Pond.jpg")
+;;                                                 (set* :wrap Texture$WrapMode/Repeat)))))
 
 (defn- make-brick [loc box* wall-mat bullet-as]
   (let [brick-geo (-> (geo "brick" box*)

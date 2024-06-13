@@ -1,6 +1,6 @@
-(def jme-version "3.7.0-beta1")
+(def jme-version "3.7.0-beta1.2")
 
-(defproject jme-clj "0.1.15-simon-brooke"
+(defproject jme-clj "0.1.15-simon-brooke-3.7.0-beta1.2"
 
   :codox {:metadata    {:doc        "**TODO**: write docs"
                         :doc/format :markdown}
@@ -30,7 +30,7 @@
                  [org.jmonkeyengine/jme3-niftygui ~jme-version]
                  [org.jmonkeyengine/jme3-networking ~jme-version]
                  [camel-snake-kebab "0.4.2"]
-                 [com.github.stephengold/Minie "3.1.0"]
+                 [com.github.stephengold/Minie "8.1.0+mt"]
                  [kezban "0.1.92"]
                  [potemkin "0.4.5"]]
 
